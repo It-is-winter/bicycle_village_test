@@ -10,11 +10,12 @@ public class AlarmDTO {
     private long userSeq = user.getUserSeq();
 
     public AlarmDTO() {}
-    public AlarmDTO(long alarmSeq, String alarmContent, int seen, String linkURL) {
+    public AlarmDTO(long alarmSeq, String alarmContent, int seen, String linkURL, long userSeq) {
         this.alarmSeq = alarmSeq;
         this.alarmContent = alarmContent;
         this.isSeen = isSeen;
         this.linkURL = linkURL;
+        this.userSeq = userSeq;
     }
 
     public long getAlarmSeq() {
