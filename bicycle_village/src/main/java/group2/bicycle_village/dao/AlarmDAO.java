@@ -1,7 +1,9 @@
 package group2.bicycle_village.dao;
 
+import group2.bicycle_village.common.dto.AlarmDTO;
+
 import java.sql.SQLException;
 
 public interface AlarmDAO {
-    public int insertAlarm(long alarmSeq, String alarmContent, int seen, String linkURL, long userSeq) throws SQLException;
+    public int insertAlarm(AlarmDTO alarm) throws SQLException;
 }
