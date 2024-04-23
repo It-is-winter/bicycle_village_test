@@ -1,21 +1,22 @@
 package group2.bicycle_village.common.dto;
 
 public class ProductDTO {
-    private int productSeq;
+    private long productSeq;
     private String Name;
+    private long parentProduct;
 
     public ProductDTO() {}
 
-    public ProductDTO(int productSeq, String name) {
+    public ProductDTO(long productSeq, String name, long parentProduct) {
         this.productSeq = productSeq;
         this.Name = name;
     }
 
-    public int getProductSeq() {
+    public long getProductSeq() {
         return productSeq;
     }
 
-    public void setProductSeq(int productSeq) {
+    public void setProductSeq(long productSeq) {
         this.productSeq = productSeq;
     }
 
@@ -25,5 +26,13 @@ public class ProductDTO {
 
     public void setName(String name) {
         this.Name = name;
+    }
+
+    public long getParentProduct() {
+        return parentProduct;
+    }
+
+    public void setParentProduct(long parentProduct) {
+        this.parentProduct = parentProduct;
     }
 }

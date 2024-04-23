@@ -1,27 +1,27 @@
 package group2.bicycle_village.common.dto;
 
 public class AlarmDTO {
-    private int alarmSeq;
+    private long alarmSeq;
     private String alarmContent;
     private int isSeen;
     private String linkURL;
 
     UserDTO user = new UserDTO();
-    private int userSeq = user.getUserSeq();
+    private long userSeq = user.getUserSeq();
 
     public AlarmDTO() {}
-    public AlarmDTO(int alarmSeq, String alarmContent, int seen, String linkURL) {
+    public AlarmDTO(long alarmSeq, String alarmContent, int seen, String linkURL) {
         this.alarmSeq = alarmSeq;
         this.alarmContent = alarmContent;
         this.isSeen = isSeen;
         this.linkURL = linkURL;
     }
 
-    public int getAlarmSeq() {
+    public long getAlarmSeq() {
         return alarmSeq;
     }
 
-    public void setAlarmSeq(int alarmSeq) {
+    public void setAlarmSeq(long alarmSeq) {
         this.alarmSeq = alarmSeq;
     }
 
@@ -47,5 +47,13 @@ public class AlarmDTO {
 
     public void setLinkURL(String linkURL) {
         this.linkURL = linkURL;
+    }
+
+    public long getUserSeq() {
+        return userSeq;
+    }
+
+    public void setUserSeq(long userSeq) {
+        this.userSeq = userSeq;
     }
 }

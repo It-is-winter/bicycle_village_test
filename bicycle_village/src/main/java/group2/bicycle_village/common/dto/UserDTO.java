@@ -1,7 +1,7 @@
 package group2.bicycle_village.common.dto;
 
 public class UserDTO {
-    private int userSeq;
+    private long userSeq;
     private String userId;
     private String userPwd;
     private String userName;
@@ -15,7 +15,7 @@ public class UserDTO {
 
     public UserDTO() {}
 
-    public UserDTO(int userSeq, String userId, String userPwd, String userName, String nickname, String userTel, String regDate, String editDate, int status) {
+    public UserDTO(long userSeq, String userId, String userPwd, String userName, String nickname, String userTel, String regDate, String editDate, int status) {
         this.userSeq = userSeq;
         this.userId = userId;
         this.userPwd = userPwd;
@@ -33,11 +33,11 @@ public class UserDTO {
         this.userGender = userGender;
     }
 
-    public int getUserSeq() {
+    public long getUserSeq() {
         return userSeq;
     }
 
-    public void setUserSeq(int userSeq) {
+    public void setUserSeq(long userSeq) {
         this.userSeq = userSeq;
     }
 

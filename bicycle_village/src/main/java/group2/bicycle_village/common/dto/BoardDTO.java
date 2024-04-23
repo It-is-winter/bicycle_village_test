@@ -1,7 +1,7 @@
 package group2.bicycle_village.common.dto;
 
 public class BoardDTO {
-    private int boardSeq;
+    private long boardSeq;
     private String boardName;
     private String regDate;
     private String userNickname;
@@ -15,14 +15,14 @@ public class BoardDTO {
     private String goodsPrice;
 
     UserDTO user = new UserDTO();
-    private int userSeq = user.getUserSeq();
+    private long userSeq = user.getUserSeq();
 
     ProductDTO product = new ProductDTO();
-    private int productSeq = product.getProductSeq();
+    private long productSeq = product.getProductSeq();
 
     public BoardDTO() {}
 
-    public BoardDTO(int boardSeq, String boardName, String regDate, String userNickname, int category, String boardCategory, int isSeen, String boardContent, String boardAddr, String boardEdit, int boardCount, String goodsPrice, int userSeq, int productSeq) {
+    public BoardDTO(long boardSeq, String boardName, String regDate, String userNickname, int category, String boardCategory, int isSeen, String boardContent, String boardAddr, String boardEdit, int boardCount, String goodsPrice, long userSeq, long productSeq) {
         this.boardSeq = boardSeq;
         this.boardName = boardName;
         this.regDate = regDate;
@@ -39,11 +39,11 @@ public class BoardDTO {
         this.productSeq = productSeq;
     }
 
-    public int getBoardSeq() {
+    public long getBoardSeq() {
         return boardSeq;
     }
 
-    public void setBoardSeq(int boardSeq) {
+    public void setBoardSeq(long boardSeq) {
         this.boardSeq = boardSeq;
     }
 
@@ -135,19 +135,19 @@ public class BoardDTO {
         this.goodsPrice = goodsPrice;
     }
 
-    public int getUserSeq() {
+    public long getUserSeq() {
         return userSeq;
     }
 
-    public void setUserSeq(int userSeq) {
+    public void setUserSeq(long userSeq) {
         this.userSeq = userSeq;
     }
 
-    public int getProductSeq() {
+    public long getProductSeq() {
         return productSeq;
     }
 
-    public void setProductSeq(int productSeq) {
+    public void setProductSeq(long productSeq) {
         this.productSeq = productSeq;
     }
 }
