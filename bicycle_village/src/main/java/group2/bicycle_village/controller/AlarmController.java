@@ -14,9 +14,13 @@ public class AlarmController implements RestController {
     /**
      * 팔로우한 사용자가 게시글을 올렸는지 체크
      */
-//    public void boardCheck(HttpServletRequest req, HttpServletResponse res) {
-//        int result =
-//    }
+    public void boardCheck(HttpServletRequest req, HttpServletResponse res) {
+        String insertBoard = req.getParameter("insertBoard");
+
+        if (insertBoard != null) {
+            insertAlarm(req, res);
+        }
+    }
 
     /**
      * 팔로우한 사용자가 게시글을 올렸을 때 알림테이블에 알림 등록
