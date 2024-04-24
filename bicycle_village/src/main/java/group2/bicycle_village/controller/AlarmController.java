@@ -30,7 +30,7 @@ public class AlarmController implements RestController {
         String Id = req.getParameter("Id");
 
         try {
-            int result = service.insertAlarm(new AlarmDTO(1,"알림생성",1,"front",1));
+            int result = service.insertAlarm(new AlarmDTO("알림생성",0,"/index.jsp",1));
         } catch (Exception e) {
             e.printStackTrace();
         }

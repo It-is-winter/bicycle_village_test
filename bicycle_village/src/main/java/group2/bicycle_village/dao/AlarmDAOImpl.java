@@ -13,15 +13,14 @@ public class AlarmDAOImpl implements AlarmDAO {
         Connection con = null;
         PreparedStatement ps = null;
         int result = 0;
-        String sql = "insert into alarm (?,?,?,?,?)";
+        String sql = "insert into alarm (alarm_seq.nextval,?,?,?) where user_seq = ?";
         try {
             con = DbUtil.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setLong(1, alarm.getAlarmSeq());
-            ps.setString(2, alarm.getAlarmContent());
-            ps.setInt(3, alarm.getIsSeen());
-            ps.setString(4, alarm.getLinkURL());
-            ps.setLong(5, alarm.getUserSeq());
+            ps.setString(1, alarm.getAlarmContent());
+            ps.setInt(2, alarm.getIsSeen());
+            ps.setString(3, alarm.getLinkURL());
+            ps.setLong(4, alarm.getUserSeq());
             result = ps.executeUpdate();
         } finally {
             DbUtil.close(con, ps);
