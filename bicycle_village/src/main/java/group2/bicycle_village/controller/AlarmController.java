@@ -29,13 +29,13 @@ public class AlarmController implements RestController {
      */
     public void insertAlarm(HttpServletRequest req, HttpServletResponse res) throws IOException {
         //세션에서 현재 로그인하고 있는 사용자 정보 얻어오기
-        //String Id = req.getParameter("Id");
+        String id = req.getParameter("Id");
         System.out.println("insert alarm");
         int result = 0;
         int insertBoard = 1;
         if (insertBoard != 0) {
             try {
-                result = service.insertAlarm("12", new AlarmDTO("알림생성", 0, "/index.jsp"));
+                result = service.insertAlarm(id, new AlarmDTO("알림생성", 0, "/index.jsp"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
