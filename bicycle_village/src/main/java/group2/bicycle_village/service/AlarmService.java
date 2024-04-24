@@ -6,5 +6,5 @@ import group2.bicycle_village.controller.RestController;
 import java.sql.SQLException;
 
 public interface AlarmService {
-    int insertAlarm(AlarmDTO alarm) throws SQLException;
+    int insertAlarm(String id, AlarmDTO alarm) throws SQLException;
 }

@@ -15,14 +15,16 @@ import java.util.ResourceBundle;
 public class HandlerMappingListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
+//        System.out.println("Listener contextInitialized 11111");
         Map<String, RestController> map = new HashMap<String, RestController>();
         Map<String, Class<?> > clzMap = new HashMap<String, Class<?>>();
         Map<String, Controller> conMap = new HashMap<String, Controller>();
         Map<String, Class<?>> conClzMap = new HashMap<>();
-
+//        System.out.println("Listener contextInitialized2222");
         ResourceBundle rb = ResourceBundle.getBundle("restController");
         ResourceBundle crb = ResourceBundle.getBundle("controller");
-
+//        System.out.println("Listener contextInitialized3333333");
+        //restController
         try {
             for(String key : rb.keySet()) {
                 String value = rb.getString(key);
@@ -35,24 +37,10 @@ public class HandlerMappingListener implements ServletContextListener {
             ex.printStackTrace();
         }
 
-        try {
-            for(String key : crb.keySet()) {
-                String value = crb.getString(key);
-                Class<?> className = Class.forName(value);
-                Controller controller = (Controller)className.getDeclaredConstructor().newInstance();
-                conMap.put(key, controller);
-                conClzMap.put(key, className);
-            }
-        }catch (Exception ex) {
-            ex.printStackTrace();
-        }
-
         //모든 영역에서 map을 사용할수 있도록 ServletContext영역에 저장한다.
         ServletContext application = sce.getServletContext();
         application.setAttribute("restMap", map);
         application.setAttribute("restClzMap", clzMap);
-        application.setAttribute("conMap", conMap);
-        application.setAttribute("conClzMap", conClzMap);
-
+//        System.out.println("Listener call");
     }
 }

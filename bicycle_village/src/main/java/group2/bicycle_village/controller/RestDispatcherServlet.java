@@ -24,9 +24,9 @@ public class RestDispatcherServlet extends HttpServlet {
         ServletContext application = config.getServletContext();
         Object obj = application.getAttribute("restMap");
         map = (Map<String, RestController>)obj;
-
         clzMap = (Map<String, Class<?>>)config.getServletContext().getAttribute("restClzMap");
 
+        System.out.println("RestDispatcherServlet init");
     }
 
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -45,6 +45,7 @@ public class RestDispatcherServlet extends HttpServlet {
             e.printStackTrace();
 
         }
+        System.out.println("RestDispatcherServlet service");
     }//service 메소드 끝
 
 

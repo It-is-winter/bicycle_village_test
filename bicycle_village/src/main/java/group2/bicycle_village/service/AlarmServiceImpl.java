@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class AlarmServiceImpl implements AlarmService {
     private AlarmDAO alarmDAO = new AlarmDAOImpl();
     @Override
-    public int insertAlarm(AlarmDTO alarm) throws SQLException {
-        return alarmDAO.insertAlarm(alarm);
+    public int insertAlarm(String id, AlarmDTO alarm) throws SQLException {
+        return alarmDAO.insertAlarm(id, alarm);
     }
 }

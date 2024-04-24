@@ -9,23 +9,25 @@ import java.sql.SQLException;
 
 public class AlarmDAOImpl implements AlarmDAO {
     @Override
-    public int insertAlarm(AlarmDTO alarm) throws SQLException {
+    public int insertAlarm(String id, AlarmDTO alarm) throws SQLException {
         Connection con = null;
         PreparedStatement ps = null;
         int result = 0;
-        String sql = "insert into alarm (alarm_seq.nextval,?,?,?) where user_seq = ?";
+        String sql = "insert into alarm values(alarm_seq.nextval, (select user_seq from member where user_id = ?), ?, ?, ?)";
+        System.out.println("sql: " + sql);
         try {
             con = DbUtil.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setString(1, alarm.getAlarmContent());
-            ps.setInt(2, alarm.getIsSeen());
-            ps.setString(3, alarm.getLinkURL());
-            ps.setLong(4, alarm.getUserSeq());
+            ps.setString(1, id);
+            ps.setString(2, alarm.getAlarmContent());
+            ps.setInt(3, alarm.getIsSeen());
+            ps.setString(4, alarm.getLinkURL());
             result = ps.executeUpdate();
         } finally {
             DbUtil.close(con, ps);
         }
 
+        System.out.println("Alarm inserted successfully, result: " + result);
         return result;
     }
 }

@@ -13,6 +13,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 @WebServlet(urlPatterns = "/front", loadOnStartup = 1)
+/*@WebServlet(name="alarm", value="/front")*/
 public class DispatcherServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -24,14 +25,13 @@ public class DispatcherServlet extends HttpServlet {
         ServletContext application = config.getServletContext();
         Object obj = application.getAttribute("conMap");
         conMap = (Map<String, Controller>)obj;
-
         conClzMap = (Map<String, Class<?>>)config.getServletContext().getAttribute("conClzMap");
 
     }
 
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String key = request.getParameter("key"); //customer
-        String methodName = request.getParameter("methodName"); //idCheck , insert , selectAll
+        String key = request.getParameter("key");
+        String methodName = request.getParameter("methodName");
 
         System.out.println("key = " + key+", methodName = " + methodName);
         try {
