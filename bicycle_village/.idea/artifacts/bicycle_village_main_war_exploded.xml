@@ -1,0 +1,45 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="bicycle_village.main:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/bicycle_village_main_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="bicycle_village.main" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/restController.properties" />
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/controller.properties" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Gradle: org.glassfish.web:jakarta.servlet.jsp.jstl:2.0.0" />
+          <element id="library" level="project" name="Gradle: jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0" />
+          <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-jdbc:10.1.20" />
+          <element id="library" level="project" name="Gradle: com.oracle.database.jdbc:ojdbc8:23.3.0.23.09" />
+          <element id="library" level="project" name="Gradle: com.google.code.gson:gson:2.10.1" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-core:2.23.1" />
+          <element id="library" level="project" name="Gradle: org.java-websocket:Java-WebSocket:1.5.6" />
+          <element id="library" level="project" name="Gradle: com.oracle.oci.sdk:oci-java-sdk-common:3.39.2" />
+          <element id="library" level="project" name="Gradle: com.oracle.database.jdbc:ucp:23.3.0.23.09" />
+          <element id="library" level="project" name="Gradle: com.oracle.database.security:oraclepki:23.3.0.23.09" />
+          <element id="library" level="project" name="Gradle: com.oracle.database.security:osdt_cert:21.13.0.0" />
+          <element id="library" level="project" name="Gradle: com.oracle.database.security:osdt_core:21.13.0.0" />
+          <element id="library" level="project" name="Gradle: jakarta.el:jakarta.el-api:5.0.0" />
+          <element id="library" level="project" name="Gradle: org.apache.tomcat:tomcat-juli:10.1.20" />
+          <element id="library" level="project" name="Gradle: org.apache.logging.log4j:log4j-api:2.23.1" />
+          <element id="library" level="project" name="Gradle: org.slf4j:slf4j-api:2.0.6" />
+          <element id="library" level="project" name="Gradle: com.oracle.oci.sdk:oci-java-sdk-circuitbreaker:3.39.2" />
+          <element id="library" level="project" name="Gradle: com.oracle.oci.sdk:oci-java-sdk-common-httpclient:3.39.2" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.15.2" />
+          <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.15.2" />
+          <element id="library" level="project" name="Gradle: org.bouncycastle:bcpkix-jdk15to18:1.74" />
+          <element id="library" level="project" name="Gradle: org.bouncycastle:bcprov-jdk15to18:1.74" />
+          <element id="library" level="project" name="Gradle: jakarta.annotation:jakarta.annotation-api:2.1.1" />
+          <element id="library" level="project" name="Gradle: io.github.resilience4j:resilience4j-circuitbreaker:1.7.1" />
+          <element id="library" level="project" name="Gradle: io.github.resilience4j:resilience4j-core:1.7.1" />
+          <element id="library" level="project" name="Gradle: org.bouncycastle:bcutil-jdk15to18:1.74" />
+          <element id="library" level="project" name="Gradle: io.vavr:vavr:0.10.2" />
+          <element id="library" level="project" name="Gradle: io.vavr:vavr-match:0.10.2" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="bicycle_village.main/web/Web" />
+    </root>
+  </artifact>
+</component>
